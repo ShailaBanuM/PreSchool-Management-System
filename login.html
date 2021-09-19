@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<title> Login Page </title>
+<style>
+body{
+    text-align: center;
+    background-image: url("./image/naty.jpg");
+	background-size: repeat-x;
+	background-position: center;
+	font-family: sans-serif;
+}
+.loginbox{
+	width: 320px;
+	height: 420px;
+	background-color: #000;
+	color: #ffffff;
+	top: 50%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 70px,30px;
+}
+.loginbox input[type="text"], input[type="password"{
+	width:100px;
+	margin-bottom:100px;
+	border:none;
+	border-bottom: 4px solid #fff;
+	background: transparent;
+	outline: none;
+	height:  40px;
+	}
+</style>
+<body>
+<script type="text/javascript">
+	function validateForm()
+	{
+		var email=document.myform.email.value;
+		var password=document.myform.password.value;
+		if (email==null||email=="")
+		{
+			alert("User ID cannot be blank");
+			return false;
+		}
+		    else if(password.length<6)
+		{
+			alert("Password must be atleast 6 characters long");
+			return false;
+		}
+	}
+</script>
+<form name="myform" method="post" action="valid.html" onsubmit="return validateForm()">
+    <div class="loginbox">
+    <br>
+<h1>Student login</h1>
+<p><label for "email" ><b>  User ID   </b></label><br></p>
+<input type="email" id="email" name="email" placeholder="Enter Email ID"><br>
+<p><label for "password"><b> Password   </b></label><br></p>
+<input type="password" id="password" name="password" placeholder="password"><br><br>
+<button 
+type="submit" 
+style="cursor:pointer"
+onclick="file:///F:/Project/valid.html"
+value="login">
+<big>   Login   </big>
+</button>
+<p>Or</p>
+<p> Register by clicking below </p>
+</form>
+<div>
+<p><h2><a href="file:///F:/Project/Registrationn.html"> Register</a></h2></p>
+<br><br>
+</div>
+</div>
+</body>
+</html>

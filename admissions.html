@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Admissions </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+*{	
+	margin: 0;
+	padding: 0;
+}
+.main{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("image/admissions.jpg");
+	padding: 50px 100px;
+	text-align:center;	
+	font-family: century gothic;
+	color: white;
+	background-position: center;
+	background-size: cover;
+}
+.first{
+	font-size: 50px;
+}
+.second{
+	font-size: 18px;
+	color: rgb(198, 193, 181);
+}
+.image{
+	width: 1130px;
+	max-width: 95%;
+	margin-left: 5%;
+	margin-top: 2%;
+	justify-content: space-around;
+}
+.loginbox{
+	text-align:center;
+	width: 320px;
+	height: 420px;
+	background-color: rgb(219, 174, 236);
+	color: #000;
+	top: 80%;
+	left: 75%;
+	position:absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 70px,30px;
+}
+.loginbox input[type="text"], input[type="password"{
+	width:100px;
+	margin-bottom:100px;
+	border:none;
+	border-bottom: 4px solid #fff;
+	background: transparent;
+	outline: none;
+	height:  40px;
+	}
+.why{
+	margin-left:20%;
+}
+</style>
+</head>
+<body>
+	<div class="main">
+		<h1 class="first"> Admissions at Kidzee </h1><br>
+		<p class="second"> Enroll your child in a Kidzee today </p>
+	</div>
+	<div class="image">
+	<img src="image/step.png">
+<script type="text/javascript">
+	function validateForm()
+	{
+		var email=document.myform.email.value;
+		var password=document.myform.password.value;
+		if (email==null||email=="")
+		{
+			alert("User ID cannot be blank");
+			return false;
+		}
+		    else if(password.length<6)
+		{
+			alert("Password must be atleast 6 characters long");
+			return false;
+		}
+	}
+</script>
+	<form name="myform" method="post" action="valid.html" onsubmit="return validateForm()">
+		<div class="loginbox"><br>
+			<h1 style= "font-size:50px;padding:5px;" >Student login</h1>
+			<p style= "font-size:30px;padding:5px;"><label for "email" ><b>  User ID   </b></label><br></p>
+			<input style= "font-size:18px;padding:5px;" type="email" id="email" name="email" ><br>
+			<p style= "font-size:30px ;padding:5px;"><label for "password"><b> Password   </b></label><br></p>
+			<input style= "font-size:18px;padding:5px;" type="password" id="password" name="password" ><br><br>
+			<button style= "font-size:15px ;padding:5px 15px; cursor:pointer;" type="submit" style="cursor:pointer"
+				onclick="file:///F:/Project/valid.html" value="login">
+				<big>   Login   </big>
+			</button>
+			<p style= "font-size:20px ;padding:5px 10px;">Or</p>
+			<p style= "font-size:20px ;padding:5px;"> Register by clicking below </p>
+	</form>
+			<div>
+				<p><h2><a style= "font-size:20px ;padding:5px;"href="file:///F:/Project/Registrationn.html"> Register</a></h2></p>
+				<br><br>
+			</div>
+		</div>
+<div >
+	<h1 class="why" style="font-family: 'Kaushan Script', cursive; word-spacing:8px; text-align:center;
+	background-color:rgb(187, 241, 88); padding:5px 10px;"> WHY KIDZEE SCHOOL ?</h1><br><br><br>
+	<div style="margin-top:-4%; margin-left:20%;">
+		<img src="image/points.png">
+	</div>
+</div>
+	<h4 style=" word-spacing:8px; text-align:center; background-color:red; padding:10px 50px;"> Copyright ® Zee Learn Ltd. All rights reserved.</h4><br><br><br>
+</body>
+</html>

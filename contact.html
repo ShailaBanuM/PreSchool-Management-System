@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<title> Contact Form </title>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("image/handy.jpg");
+	background-size: cover;
+	font-family: sans-serif;
+	font-size: 20px;
+	}
+.contact{
+	width: 500px;
+	top: 20px;
+	left: 450px;
+	position: absolute;
+	}
+.c{
+	text-align: center;
+	margin-top: 80px;
+	margin-left: -70px;
+	}
+.name{
+	position: relative;
+	border: none;
+	left: 80px;
+	height: 30px;
+	width: 230px;
+	border-radius: 8px;
+	border-bottom: 2px solid orange;
+	font-size: 18px;
+	}
+.email{
+	position: relative;
+	border: none;
+	left: 92px;
+	height: 30px;
+	width: 230px;
+	border-radius: 8px;
+	border-bottom: 2px solid orange;
+	font-size: 18px;
+	}
+.tel{
+	position: relative;
+	border: none;
+	top: -25px;
+	left: 152px;
+	height: 30px;
+	width: 230px;
+	border-radius: 8px;
+	border-bottom: 2px solid orange;
+	font-size: 18px;
+	}
+.comment{
+	width: 340px;
+	height: 120px;
+	border-radius: 8px;
+	padding: 0 22px;
+	font-size: 18px;
+	text-align: center-left;
+	border-color: #ffa500;
+	}
+button{
+	display: block;
+	margin: 20px 0px 0px 20px;
+	text-align: center;
+	border-radius: 12px;
+	border: 1px solid orange;
+	padding: 14px 110px;
+	outline: none;
+	color: black;
+	cursor: pointer;
+	transition: 0.25px;
+	margin-left: 70px;
+	}
+button:hover{
+	background-color: #ffa500;
+	}
+</style>
+</head>
+<body>
+<script>
+function IsEmpty() 
+   {
+
+      if (document.form.name.value == ""||document.form.name.value == null) 
+	  {
+        alert("Name cannot be empty");
+		return false;
+      }
+	  else if (document.form.tel.value==""|| document.form.tel.value==null)
+	  {
+		alert("Please Enter your number");
+		return false;
+	  }
+	  else if (document.form.tel.value.length < 10)
+	  {
+		alert("Please Enter valid Mobile number");
+		return false;
+	  }
+	  else if (document.form.comment.value==""|| document.form.comment.value==null)
+	  {
+		alert("Please Enter your valuable Comments");
+		return false;
+	  }
+	  return;
+	}
+</script>
+<div class="contact">
+	<form name="form" method="post" action="sent.html" onsubmit="return IsEmpty() ">
+		<h1 class="c"> Contact Us </h1><br>
+		<b><big> Name </big></b>
+		<input class="name" name="name" type="text" placeholder="Shyla"><br><br>
+		<b> Email </b>
+		<input class="email" name="email" type="email" placeholder="shyla@gmail.com"><br><br>
+		<h4> Mobile No </h4>
+		<input class="tel" type="tel" name="tel" placeholder="123456789"><br>
+		<h4> Comments or Messages </h4> <br>
+			<label for="multiplelineinput" >
+			<textarea class="comment" rows="3" cols="50"  name="comment" placeholder="Enter your Messages here" id="multiLineInput"></textarea>
+			</label><br>
+		<button 
+		type="submit" 
+		style="cursor:pointer" 
+		formaction="file:///F:/Project/sent.html">
+		<h6> Send Message </h6>
+		</button>
+		<br><br>
+	</form>
+</div>
+</body>
+</html> 

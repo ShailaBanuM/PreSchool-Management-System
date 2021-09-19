@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Video </title>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+.container{
+	width: 80%;
+	margin: 45px auto;	
+}
+body{
+	background: #2e8d86;
+}
+.container h1{
+	padding: 20px 0;
+	font-size: 44px;
+	text-align: center;
+}
+.row{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.col{
+	flex-basis: 50%;
+	min-width: 250px;	
+}
+.feature-img{
+	width: 83%;
+	margin: auto;
+	position: relative;
+	border-radius: 6px;
+	overflow: hidden;
+	
+}
+.small-img-row{
+	display: flex;
+	background: #efefef;
+	margin: 20px 0;
+	align-items: center;
+	border-radius: 6px;
+	overflow: hidden;
+	width: 85%;	
+}
+.small-img{
+	position: relative;
+}
+.small-img img{
+	width: 150px;
+}
+.small-img-row p{
+	margin-left: 20px;
+	color: #707070;
+	line-height: 22px;
+	font-size: 15px;
+}
+.play-btn{
+	width: 60px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	cursor: pointer;
+	
+}
+.small-img .play-btn{
+	width: 35px;
+} 
+.video-player{
+	width: 80%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	display: none;
+}
+video:focus{
+	outline: none;
+}
+.close-btn{
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	width: 30px;
+	cursor: pointer;
+}
+.home{
+	text-align: center;
+	font-size: 18px;
+	margin-left:600px;
+}
+</style>
+<body>
+<div class="container">
+<h1> Video Gallery </h1>
+<div class="row">
+	<div class="col">
+		<div class="feature-img">
+			<img src="media/infra.jpg" width="100%">
+			<img src="media/play.png" class="play-btn" onclick="playVideo('media/infraVideo.mp4')">
+		</div>
+	</div>
+	
+	<div class="col">
+		<div class="small-img-row">
+			<div class="small-img">
+				<img src="media/growthAndFun.jpg">
+				<img src="media/play.png" class="play-btn" onclick="playVideo('media/activitiescorner.mp4')">
+			</div>
+			<p> How to impart skills with fun in Kids </p>
+		</div>
+		<div class="small-img-row">
+			<div class="small-img">
+				<img src="media/learningConcepts.jpg">
+				<img src="media/play.png" class="play-btn" onclick="playVideo('media/adayatkidzee.mp4')">
+			</div>
+			<p> A Day at KIDZEE </p>
+		</div>
+		<div class="small-img-row">
+			<div class="small-img">
+				<img src="media/programme.jpg">
+				<img src="media/play.png" class="play-btn" onclick="playVideo('media/programmeVideo.mp4')">
+			</div>
+			<p> Our International Standard Programme Techniques</p>
+		</div>
+	</div>	
+</div>
+</div>
+<div class="video-player" id="videoPlayer">
+	<video width="100%" controls autoplay id="myVideo">
+	<source src="media/infraVideo.mp4" type="video/mp4">
+	</video>
+	<img src="media/close.png" class="close-btn" onclick="stopVideo()">
+</div>
+<footer>
+<div>
+<h5><a class="home" href="file:///F:/Project/home1.html"> Back to Home</a></h5>
+</div>
+</footer>
+<script>
+	var videoPlayer=document.getElementById("videoPlayer");
+	var myVideo=document.getElementById("myVideo");
+	
+	function stopVideo()
+	{
+		videoPlayer.style.display="none";
+	}
+	function playVideo(file)
+	{
+		myVideo.src=file;
+		videoPlayer.style.display="block";
+	}
+</script>
+</body>
+</html>

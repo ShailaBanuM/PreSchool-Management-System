@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Home Page </title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+<style>
+body{
+	font-family: century gothic;
+}
+.banner{
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+}
+.banner video{
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	float: right;
+	margin-top: -160px;
+	margin-left: 500px;
+	}
+nav ul li {
+	position: relative;
+	list-style:none;
+	display: inline-block;
+	}
+nav ul li a{
+	display: block;
+	line-height: 45px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	padding: 0px 15px;
+	border: 1px solid #fff;
+	tranistion: 0.6s ease;
+	}
+.active {
+	background-color: #fff;
+	color: #000;
+	}
+nav ul ul{
+	position: absolute;
+	top:60px;
+	display:none;
+}
+nav ul li:hover > u {
+	display: none;
+}
+nav ul ul li{
+	width: 150px;
+	float: none;
+	display: list-item;
+	position: relative;
+}
+
+.title{
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	}
+.title h1{
+	color: #000;
+	font-size: 70px;	
+	}
+.multicolortext {
+    background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+	font-family: 'Rock Salt', cursive;
+    }
+.button{
+	position: absolute;
+	top: 73%;
+	left: 32%;
+	transform: translate(-50%,-50%);
+	}
+.button1{
+	position: absolute;
+	top: 73%;
+	left: 44%;
+	transform: translate(-50%,-50%);
+	}
+.btn{
+	padding: 10px 30px;
+	border: 1px solid #fff;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	}
+.btn:hover{
+	background-color: #fff;
+	color: #000;
+	}
+.logo{
+	transform: translate(-50%,-50%);
+	margin-top:3%;
+	margin-left: 7%;
+}
+.logo img{
+	width: 100x;
+	height: auto;
+}
+.btn1:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+</style>
+</head>
+<body>
+	<div class="banner">
+		<video autoplay muted loop>
+			<source src="media/bg_girl.mp4" type="video/mp4">
+		</video>
+		<div class="dropdown">
+			<nav>
+				<img class="logo" src="logo.png">
+				<ul>
+					<li><a class="active" href="#"> Home </a></li>
+					<li><a href="file:///F:/Project/about_us.html" class="btn1">About us</a></li>
+					<li><a href="file:///F:/Project/programme.html" class="btn1">Programme</a></li>
+					<li><a href="file:///F:/Project/admissions.html" class="btn1">Admissions </a></li>
+					<li><a href="file:///F:/Project/contact.html" class="btn1">Contact Us</a></li></b>
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="title">
+			<h1>
+				<span class="multicolortext">KIDZEE PlaySchool</span>
+			</h1>
+		</div>
+		<div class="button">
+			<a href="file:///F:/Project/video.html" class="btn"> <b>WATCH VIDEOS</b></a>
+		</div>
+		<div class="button1">
+			<a href="file:///F:/Project/gallery1.html" class="btn"> <b>GALLERY</b></a>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!doctype html>
+<html>
+<head>
+<title> Registration Form </title>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url("image/admissions.jpg");
+	background-position: center;
+	background-size: cover;
+	font-family: sans-serif;
+	margin-top: 50px;
+	margin-left: 280px;
+}
+.regform{
+	width: 800px;
+	background color:#ff4147;
+	margin-left: 40px;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	border-radius: 15px 15px 0px 0px;
+	}
+#nam{
+	width:100%;
+	height:100px;
+	}
+.name{
+	margin-left: 25px;
+	margin-top: 30px;
+	color: black;
+	font-size: 18px
+	font-weight: 700;
+	}
+.firstname{
+	position: relative;
+	left: 300px;
+	top: -37px;
+	line-height: 40px;
+	width: 160px;
+	border-radius: 6px;
+	padding:0 22px;
+	font-size: 18px;
+	}
+.lastname{
+	position: relative;
+	left: 450px;
+	top:-81px;
+	width: 160px;
+	line-height: 40px;
+	border-radius: 6px;
+	padding:0 22px;
+	font-size: 18px;
+	}
+.firstlabel{
+	position: relative;
+	text-transform: capitalize;
+	left: 300px;
+	top:-45px;
+	font-size: 14px;
+	}
+.lastlabel{
+	position: relative;
+	text-transform: capitalize;
+	left: 240px;
+	top:-45px;
+	font-size: 14px;
+	}
+.dob{
+	position: relative;
+	left: 300px;
+	top: -37px;
+	line-height: 40px;
+	width: 400px;
+	border-radius: 6px;
+	padding:0 22px;
+	font-size: 18px;
+	}
+.rad{
+	display: inline-block;
+	pading-right: 60px;
+	font-size: 20px;
+	margin-left: 15px;
+	margin-top: 10px;
+	}
+.rad input{
+	top: 500px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+	outline: none;
+	margin-left: 30px;
+	}
+.religion{
+	position: relative;
+	left: 295px;
+	top: -20px;
+	height: 33px;
+	width: 450px;
+	border-radius: 6px;
+	padding:0 22px;
+	font-size: 12px;
+	}
+.nationality{
+	position: relative;
+	left: 295px;
+	top: -20px;
+	height: 30px;
+	width: 400px;
+	border-radius: 6px;
+	padding:0 22px;
+	font-size: 18px;
+	}
+.password{
+	position: relative;
+	left: 295px;
+	top: -20px;
+	height: 30px;
+	width: 400px;
+	border-radius: 6px;
+	padding:0 22px;
+	font-size: 18px;
+	}
+.repassword{
+	position: relative;
+	left: 295px;
+	top: -20px;
+	height: 30px;
+	width: 400px;
+	border-radius: 6px;
+	padding:0 22px;
+	font-size: 18px;
+	}
+.siblings{
+	position: relative;
+	left: 295px;
+	top:-35px;
+	height: 30px;
+	width: 400px;
+	border-radius: 6px;
+	padding:0 22px;
+	font-size: 18px;
+	}
+table{
+	position: relative;
+	border-radius: 6px;
+	padding:0 22px;
+	font-size: 18px;
+	border-collapse: collapse;
+	border: none;
+	}
+td, th {
+	border: none;
+	text-align: left;
+	padding: 8px;
+	}
+.address{
+	position: relative;
+	left: 295px;
+	top:-20px;
+	height: 100px;
+	width: 400px;
+	border-radius: 6px;
+	padding:0 22px;
+	font-size: 18px;
+	}
+.radio input{
+	top: 500px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+	outline: none;
+	margin-left: 30px;
+	}
+button{
+	background-color: #3BAF9F;
+	display: block;
+	margin: 20px 0px 0px 20px;
+	text-align: center;
+	border-radius: 12px;
+	border: #366473;
+	padding: 14px 110px;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	transition: 0.25px;
+	margin-left: 270px;
+	}
+button:hover{
+	background-color: #5390F5;
+	}
+</style>
+</head>
+<body>
+<script language="Javascript">
+    function IsEmpty() 
+   {
+
+      if (document.form.first_name.value == ""||document.form.first_name.value == null) 
+	  {
+        alert("Name cannot be empty");
+		return false;
+      }
+	  else if (document.form.password.value==""|| document.form.password.value==null)
+	  {
+		alert("Please Enter your Password");
+		return false;
+	  }
+	  else if (document.form.password.value.length<6)
+	  {
+		alert("Password should atleast be 6 characters");
+		return false;
+	  }
+	  else if (document.form.repassword.value == "" ||document.form.repassword.value == null)
+	  {
+		alert("Please Re-Enter your password");
+		return false;
+	  }
+	  else if(document.form.password.value!=document.form.repassword.value)
+		{
+			alert("Password must match");
+			return false;
+		}
+	  else if(document.form.father.value == "" ||document.form.father.value == null)
+	    {
+			alert("Please enter your Father's Name");
+			return false;
+	    }
+	 else if(document.form.mother.value == "" ||document.form.mother.value == null)
+	    {
+			alert("Please enter your Mother's Name");
+			return false;
+	    }
+	 else if(document.form.address.value == "" ||document.form.address.value == null)
+	    {
+			alert("Address is Mandatory");
+			return false;
+	    }
+	 else if(document.form.password.value==document.form.repassword.value)
+		{
+			return true;
+		}
+	}
+  </script>
+<form name="form" method="post" action="Regcomplete.html" onsubmit="return IsEmpty();">
+<div class="regform"> <h1>Registration Form </h1></div>
+<div id="nam">
+<h3 class="name"> Name </h3>
+<input class="firstname" type="text" name="first_name"><br>
+<label class="firstlabel"> first name </label>
+<input class="lastname" type="text" name="last_name">
+<label class="lastlabel"> last name </label>
+</div>
+
+<h3 class="name"> Date of birth </h3>
+<input class="dob" type="date" name="dob" id="dob" value="2018-08-08"
+       min="2010-01-01" max="2021-12-31" placeholder="DD--MM--YYYY">
+
+<h3 class="name"> Password </h3>
+<input class="password" name="password" type="password" id="password">
+<h3 class="name"> Re-Enter Password </h3>
+<input class="repassword" name="repassword" type="password" id="repassword">
+
+<h3 class="name"> Gender </h3>
+<input class="rad" type="radio" id="gender-male" value="male" name="v">
+<label class="rad"> Male </label>
+<input class="rad" type="radio" id="gender-female" value="female" name="v">
+<label class="rad"> Female </label>
+
+<h3 class="name"> Religion </h3>
+<select class="religion" name="religion">
+<option disabled="disabled" selected="selected"> --Choose your Religion </option>
+<option> Hindu </option>
+<option> Muslim </option>
+<option> Christian </option>
+<option> Buddist </option>
+<option> Jain </option>
+<option> Others </option>
+</select>
+
+<h3 class="name"> Nationality </h3>
+<input class="nationality" type="text"  name="nationality">
+
+<h3 class="name" > Sibilings Details</h3>
+<label for="multiplelineinput" >
+<textarea class="siblings" rows="3" cols="50" placeholder="Name---Age---School" id="multiLineInput"></textarea>
+</label>
+
+<h3 class="name"> Parents Information </h3><br>
+<table id="parents" class="parents">
+<tr>
+<th>Father's Name</th>
+<td><input class="father" name="father" type="text"></td>
+<th>Mother's Name</th>
+<td><input class="father" name="mother" type="text"></td>
+</tr>
+<tr>
+<th>Father's Qualification</th>
+<td><input class="father" type="text"></td>
+<th>Mother's Qualification</th>
+<td><input class="father" type="text"></td>
+</tr>
+<tr>
+<th>Father's Occupation</th>
+<td><input class="father" type="text"></td>
+<th>Mother's occupation</th>
+<td><input class="father" type="text"></td>
+</tr>
+<tr>
+<th>Father's E-mail</th>
+<td><input class="father" type="email" id="email"></td>
+<th>Mother's E-mail</th>
+<td><input class="father" type="email" id="email"></td>
+</tr>
+<tr>
+<th>Father's phone</th>
+<td><input class="father" type="number" id="phone"></td>
+<th>Mother's phone</th>
+<td><input class="father" type="number" id="phone"></td>
+</tr>
+</table>
+
+<h3 class="name"> Permanent Address </h3>
+<label for="multiplelineinput">
+<textarea class="address" name="address" rows="5" cols="50" id="multiLineInput"></textarea>
+</label>
+
+<h3 class="name"> I agree to pay School fees by </h3><br>
+<label class="radio" >
+<input class="radio-one" type="radio" checked="checked" name="s" value="cash">
+<span class="checkmark"></span>
+Cash
+<input class="radio-two" type="radio" name="s" value="card">
+<span class="checkmark"></span>
+Card
+<input class="radio-three" type="radio" name="s" value="online">
+<span class="checkmark"></span>
+Online
+<input class="radio-four" type="radio" name="s" value="cheque">
+<span class="checkmark"></span>
+Cheque
+</label>
+<br><br>
+
+<button 
+type="submit" 
+style="cursor:pointer" 
+formaction="file:///F:/Project/Regcomplete.html">
+<h1> Register </h1>
+</button>
+<br><br><br>
+</form>
+</body>
+</html>
