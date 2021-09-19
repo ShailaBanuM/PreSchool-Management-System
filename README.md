@@ -1,0 +1,2 @@
+# PreSchool-Management-System
+The  Project is aimed at developing a Web Application that depicts Online registration, login and further information about the “Little Genius Play School”  Using of this application institutions can improve the efficiency of their services.   This application contains all basic information like Infrastructure, Learning concepts, teaching methodology.  This also contains a Registration form and a login portal
